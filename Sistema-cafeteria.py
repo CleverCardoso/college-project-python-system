@@ -212,7 +212,6 @@ class Clientes:
         while True:
             email = input_nao_vazio("Email do cliente: ") 
             if re.match(r"^[\w\.-]+@[\w\.-]+\.\w+$", email):
-                print("Cliente cadastrado")
                 break
             else:
                 print("Email inválido. Tente novamente.")
@@ -356,6 +355,7 @@ class pedido:
     
     def novo_pedido(self):
         """Fluxo completo de novo pedido, com resumo final."""
+        
         cabecalho("Novo Pedido")
         if not self.clientes.lista_clientes:
             print("Cadastre um cliente primeiro.")
@@ -552,7 +552,7 @@ def main():
         print("1. Produtos")
         print("2. Clientes")
         print("3. Ver cardápio")
-        print("4. Fazer pedido")
+        print("4. Pedidos")
         print("5. Salvar & Sair")
         opcao = input_nao_vazio("Escolha uma opção: ").strip()
         
