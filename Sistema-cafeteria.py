@@ -25,7 +25,6 @@ def linha(tam=42):
 
 def cabecalho(txt):
     """Limpa a tela e imprime um cabeçalho padrão centralizado."""
-    
     limpar_tela()
     print(linha())
     print(txt.center(42))
@@ -39,6 +38,9 @@ def input_nao_vazio(msg):
         if v:
             return v
         print("Entrada vazia. Tente novamente.")
+
+def pausa(msg="\nPressione Enter para voltar..."):
+    input(msg)
 
 
 # =========================
@@ -159,6 +161,7 @@ class Produtos:
             print("Sem produtos cadastrados.")
             return
         self.ver_tabela(self.lista_produto)
+        pausa()
         
         
     def ver_promocoes(self):
@@ -170,7 +173,7 @@ class Produtos:
             print("Nenhum produto em promoção")
             return
         self.ver_tabela(promo)
-        
+        pausa()
         
     def buscar_por_nome(self,termo):
         """Busca por nome (case-insensitive, contém)."""
@@ -240,6 +243,7 @@ class Clientes:
             print(linha())
             for l in linhas:
                 print(f"{str(l[0]):<3} {l[1]:<25} {l[2]:<15} {l[3]:<30}") 
+        pausa()
                 
     def buscar(self, termo):
         """Busca cliente por nome, telefone ou e-mail (contains, case-insensitive)."""
@@ -408,6 +412,7 @@ class pedido:
                 print(f"  - {it['qtd']}x {it['nome']}{flag} @ R$ {it['preco']:.2f}")
             print(f"Subtotal: R$ {p['subtotal']:.2f} | Desconto: R$ {p['desconto']:.2f} | TOTAL: R$ {p['total']:.2f}")
         print(linha())
+        pausa()
         
         
     def relatorio_venda_dia(self):
@@ -423,6 +428,7 @@ class pedido:
         cabecalho(f"Relatório de Vendas - {hoje}")
         print(f"Pedidos: {qtd_pedidos}")
         print(f"Total arrecadado: R$ {total:.2f}")
+        pausa()
         
     
     def relatorio_pedidos_por_cliente(self):
@@ -446,6 +452,7 @@ class pedido:
             soma += p["total"]
         print(linha())
         print(f"Total acumulado: R$ {soma:.2f}")
+        pausa()
         
         
 # =========================
