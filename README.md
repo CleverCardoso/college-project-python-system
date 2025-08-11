@@ -1,7 +1,6 @@
 # COFFEE SHOPS TIA ROSA --- Sistema de Console (Python)
 
-Sistema de terminal para gerenciar **Produtos**, **Clientes** e **Pedidos** de uma cafeteria.
-Dados são persistidos em arquivos **JSON** e as listagens são formatadas com a biblioteca **Tabulate** para melhor visualização no terminal.
+Sistema de terminal para gerenciar **Produtos**, **Clientes** e **Pedidos** de uma cafeteria. Dados são persistidos em arquivos **JSON** e as listagens são formatadas com a biblioteca **Tabulate**.
 
 ## Funcionalidades
 
@@ -16,41 +15,29 @@ Dados são persistidos em arquivos **JSON** e as listagens são formatadas com a
 -   Python 3.10+
 -   Biblioteca: `tabulate`
 
-## Instalação
+## Como Rodar
 
-1.  **Clone o repositório (opcional, se estiver no GitHub):**
+1.  **Crie e ative o ambiente virtual:**
     ```bash
-    git clone <https://github.com/CleverCardoso/college-project-python-system>
-    cd <college-project-python-system>
+    # Comando para criar o ambiente
+    python -m venv venv
+
+    # Ative o ambiente
+    # No Windows: .\venv\Scripts\activate
+    # No macOS/Linux:
+    source venv/bin/activate
     ```
 
-2.  **Crie e ative um ambiente virtual:**
-
-    * Crie o ambiente:
-        ```bash
-        python -m venv venv
-        ```
-    * Ative o ambiente:
-        * **Windows:**
-            ```shell
-            .\venv\Scripts\activate
-            ```
-        * **macOS / Linux:**
-            ```shell
-            source venv/bin/activate
-            ```
-
-3.  **Instale as dependências:**
+2.  **Instale as dependências:**
     ```bash
     pip install tabulate
     ```
 
-## Como Executar
-
-Com o ambiente virtual ativado e as dependências instaladas, execute o seguinte comando na raiz do projeto:
+3.  **Execute o programa:**
+    ```bash
+    python Sistema-cafeteria.py
+    ```
 
 ## Autor
-Cleverlandio Cardoso de Oliveira Junior
 
-```bash
-python Sistema-cafeteria.py
+Cleverlandio Cardoso de Oliveira Junior
