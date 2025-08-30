@@ -1,0 +1,80 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Misto Quente",
+      "preco": 2.5,
+      "ingredientes": [
+        "pao",
+        "presuto",
+        "queijo"
+      ],
+      "promocao": true
+    },
+    {
+      "id": 2,
+      "nome": "coxinha",
+      "preco": 6.0,
+      "ingredientes": [
+        "massa",
+        "frango"
+      ],
+      "promocao": true
+    },
+    {
+      "id": 3,
+      "nome": "cafe preto",
+      "preco": 1.5,
+      "ingredientes": [
+        "cafe"
+      ],
+      "promocao": false
+    }
+  ],
+  "clientes": [
+    {
+      "nome": "Juliana",
+      "tel": "(44)92889-928839",
+      "email": "juliana@gmail.com"
+    },
+    {
+      "nome": "pedro",
+      "tel": "(22)99223-9889",
+      "email": "pedro@hotmail.com"
+    },
+    {
+      "nome": "Mike",
+      "tel": "(33)2271-4437",
+      "email": "mk@gmail.com"
+    }
+  ],
+  "pedidos": [
+    {
+      "data_hora": "2025-08-10 23:43:39",
+      "cliente": {
+        "nome": "pedro",
+        "tel": "(22)99223-9889",
+        "email": "pedro@hotmail.com"
+      },
+      "itens": [
+        {
+          "id": 3,
+          "nome": "cafe preto",
+          "preco": 1.5,
+          "promocao": false,
+          "qtd": 1
+        },
+        {
+          "id": 1,
+          "nome": "Misto Quente",
+          "preco": 2.5,
+          "promocao": true,
+          "qtd": 1
+        }
+      ],
+      "subtotal": 4.0,
+      "desconto": 0.25,
+      "total": 3.75
+    }
+  ]
+}
